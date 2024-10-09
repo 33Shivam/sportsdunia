@@ -236,15 +236,14 @@ const cards = [
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          The Blogging Website designed for my mom is a personalized platform
+          that allows her to share her thoughts, experiences, and stories with a
+          wider audience. The backend is entirely handled by Supabase. The site
+          is user-friendly, featuring a clean and intuitive interface that makes
+          it easy for her to create, edit, and publish blog posts. With a focus
+          on readability and engagement, the website supports rich text
+          formatting, image uploads, and comment sections for readers to
+          interact with the content.
         </p>
       );
     },
@@ -259,15 +258,13 @@ const cards = [
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          The Flight Fare Prediction Model is a sophisticated machine learning
+          solution designed to predict airline ticket prices accurately. This
+          project aims to provide valuable insights to travelers, airlines, and
+          travel agencies by forecasting flight fares based on historical data
+          and various influential factors. By leveraging this model, users can
+          better understand pricing trends, which can assist in planning trips
+          and making budget-conscious decisions.
         </p>
       );
     },
