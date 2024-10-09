@@ -5,7 +5,6 @@ import Navabar from "@/components/global/navbar";
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { FlipWords } from "@/components/ui/flip-words";
 import Badge from "@/components/ui/badge";
-import { PinContainer } from "@/components/ui/3d-pin";
 
 import { Timeline } from "@/components/ui/timeline";
 import ExpandabelCard from "@/components/ui/expandable-cards";
@@ -37,7 +36,15 @@ export default function Home() {
             to fool around with the card on your right 👉 , I’m pumped to show
             off experience, my work (and some questionable jokes)!
           </p>
-          <button className=" mt-8 overflow-hidden w-1/3 relative inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group">
+          <button
+            className=" mt-8 overflow-hidden w-1/3 relative inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/resume.pdf";
+              link.download = "Shivam_Anand_Resume.pdf";
+              link.click();
+            }}
+          >
             <span className="group-hover:translate-x-40 text-center transition duration-500">
               View Resume
             </span>
