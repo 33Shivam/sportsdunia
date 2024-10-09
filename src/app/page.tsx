@@ -1,22 +1,16 @@
+/* eslint-disable */
 "use client";
-
 import Image from "next/image";
 import Navabar from "@/components/global/navbar";
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { FlipWords } from "@/components/ui/flip-words";
 import Badge from "@/components/ui/badge";
-import Header from "@/components/global/header";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { PinContainer } from "@/components/ui/3d-pin";
-import { SparklesCore } from "@/components/ui/sparkles";
-// import { calsans } from "@/fonts/calsans";
-import { twMerge } from "tailwind-merge";
-import { TracingBeam } from "@/components/ui/tracing-beam";
+
 import { Timeline } from "@/components/ui/timeline";
 import ExpandabelCard from "@/components/ui/expandable-cards";
 import TechStack from "@/components/ui/tech-stack";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
-import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Meteors } from "@/components/ui/meteors";
 export default function Home() {
   return (
@@ -75,9 +69,9 @@ export default function Home() {
           }
           className="h-[20rem] border rounded-md"
         >
-          "If it involves code, I’ve probably{" "}
+          If it involves code, I've probably
           <span className="text-red-500">broken it once, </span> then learned
-          how to <span className="text-red-500">fix it twice!"</span>.
+          how to <span className="text-red-500">fix it twice!</span>.
         </MaskContainer>
       </div>
       <p className=" text-center mb-4 mt-32 text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
@@ -94,153 +88,6 @@ export default function Home() {
 //CONTENT NOT CODE!!!!!!!!!!
 
 const words = ["friendly", "creative", "versatile", "modern"];
-
-const content = [
-  {
-    title: "Collaborative Editing",
-    description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
-      <PinContainer
-        title="/ui.aceternity.com"
-        href="https://twitter.com/mannupaaji"
-      >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Aceternity UI
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
-              Customizable Tailwind CSS and Framer Motion Components.
-            </span>
-          </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-black to-blue-500" />
-        </div>
-      </PinContainer>
-    ),
-  },
-  {
-    title: "Version control",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
-      </div>
-    ),
-  },
-  {
-    title: "Running out of content",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
-      </div>
-    ),
-  },
-];
-
-// // <div>
-// <MaskContainer
-// revealText={
-//   <p className="max-w-4xl mx-auto text-slate-800 text-center  text-4xl font-bold">
-//     The first rule of MRR Club is you do not talk about MRR Club.
-//     The second rule of MRR Club is you DO NOT talk about MRR Club.
-//   </p>
-// }
-// revealSize={300}
-// className="h-[40rem] rounded-md"
-// >
-// The first rule of <span className="text-red-500">MRR Club</span> is
-// you do not talk about MRR Club. The second rule of MRR Club is you
-// DO NOT talk about <span className="text-red-500">MRR Club</span>.
-// </MaskContainer>
-// </div>
-const dummyContent = [
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Sit duis est minim proident non nisi velit non consectetur. Esse
-          adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-          Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-          incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-          fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-          nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-          occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-          officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-          commodo et labore dolore commodo pariatur.
-        </p>
-        <p>
-          Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-          veniam in commodo id reprehenderit adipisicing. Proident duis
-          exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-        </p>
-        <p>
-          Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-          reprehenderit deserunt amet laborum consequat adipisicing officia qui
-          irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-          Amet culpa officia aliquip deserunt veniam deserunt officia
-          adipisicing aliquip proident officia sunt.
-        </p>
-      </>
-    ),
-    badge: "Ministry Of Housing And Urban Affairs",
-    image: "",
-  },
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-        <p>
-          In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-          veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-          reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-          cillum ut mollit.
-        </p>
-      </>
-    ),
-    badge: "Changelog",
-    image: "",
-  },
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-      </>
-    ),
-    badge: "Launch Week",
-    image: "",
-  },
-];
 
 const data = [
   {
