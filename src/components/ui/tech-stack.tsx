@@ -27,7 +27,7 @@ export function FeaturesSectionDemo() {
     {
       title: "Java",
       description:
-        "Java is my core programming langauge. I mean you can't go wrong with the lagauge you learnt Data-Structures in ",
+        "Java is my core programming langauge. I mean you can't go wrong with the langauge you learnt Data-Structures in ",
       icon: <IconLetterJ />,
     },
     {
@@ -44,19 +44,19 @@ export function FeaturesSectionDemo() {
     {
       title: "Python",
       description:
-        "My go to scripting langauge whenever I need automate stuff. I once booked IRCTC ticket using python.",
+        "My goto scripting langauge whenever I need automate stuff. I once booked IRCTC ticket using python.",
       icon: <IconBrandPython />,
     },
     {
       title: "Version Control",
       description:
-        "For a coder like myself whose has a history of writing code that is like a wild circus. Git is my go to.",
+        "For a coder like myself who has a history of writing code that is like a wild circus. Git is my saviour.",
       icon: <IconBrandGithub />,
     },
     {
       title: "And everything else",
       description:
-        "I already punching above my stack. Accept my sincere apologies",
+        "I am already punching above my stack. Accept my sincere apologies",
       icon: <IconHeart />,
     },
   ];
