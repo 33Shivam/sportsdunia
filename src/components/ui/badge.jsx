@@ -84,7 +84,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   );
 
   const texture = useTexture(
-    "https://nyjqarqjaejlwnxfqbjn.supabase.co/storage/v1/object/public/Assests/badn.jpg"
+    "https://nyjqarqjaejlwnxfqbjn.supabase.co/storage/v1/object/public/Assests/Frame%2031.jpg"
   );
   const { width, height } = useThree((state) => state.size);
   const [curve] = useState(
