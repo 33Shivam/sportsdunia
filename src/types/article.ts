@@ -1,4 +1,4 @@
-export interface Article {
+export type Article = {
     id?: number; // IndexedDB auto-incremented ID
     source: {
       id: string | null;

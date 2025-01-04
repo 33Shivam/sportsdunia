@@ -18,33 +18,16 @@ import {
   TableRow,
 } from "../table";
 import { useState } from "react";
+import { mkConfig, generateCsv, download } from "export-to-csv";
 
-// Utility function to download data as CSV
-const downloadCSV = (data: any[], columns: ColumnDef<any>[]) => {
-  const header = columns
-    .map((col) => flexRender(col.header, {}))
-    .join(",")
-    .replace(/\n/g, " "); // Prepare header
+// CSV configuration
+const csvConfig = mkConfig({
+  fieldSeparator: ",",
+  decimalSeparator: ".",
+  useKeysAsHeaders: true, // Uses column accessorKeys as headers
+});
 
-  const rows = data
-    .map((row) =>
-      columns
-        .map((col) => {
-          const cellValue = flexRender(col.cell, { row });
-          return `"${cellValue}".replace(/"/g, '""')`; // Escape quotes inside cell data
-        })
-        .join(",")
-    )
-    .join("\n");
-
-  const csvContent = `data:text/csv;charset=utf-8,${header}\n${rows}`;
-  const encodedUri = encodeURI(csvContent);
-  const link = document.createElement("a");
-  link.setAttribute("href", encodedUri);
-  link.setAttribute("download", "table_data.csv");
-  link.click();
-};
-
+// Props for the DataTable
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
@@ -68,10 +51,18 @@ export function DataTable<TData, TValue>({
     getFilteredRowModel: getFilteredRowModel(),
     initialState: {
       pagination: {
-        pageSize: 10, // Set maximum rows per page
+        pageSize: 10,
       },
     },
   });
+
+  // Export all data to CSV
+  var dataString = JSON.stringify(data);
+  console.log("datastring", dataString);
+  const handleExportData = () => {
+    const csv = generateCsv(csvConfig)(data); // Generate CSV for all data
+    download(csvConfig)(csv); // Trigger CSV download
+  };
 
   return (
     <div className="rounded-md border flex flex-col h-5/6 w-4/6 max-h-screen overflow-hidden">
@@ -85,10 +76,10 @@ export function DataTable<TData, TValue>({
           className="w-full p-2 border rounded"
         />
         <button
-          onClick={() => downloadCSV(data, columns)}
+          onClick={handleExportData}
           className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
         >
-          CVS
+          CSV
         </button>
       </div>
 
@@ -98,18 +89,16 @@ export function DataTable<TData, TValue>({
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <TableHead key={header.id}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
-                    </TableHead>
-                  );
-                })}
+                {headerGroup.headers.map((header) => (
+                  <TableHead key={header.id}>
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                  </TableHead>
+                ))}
               </TableRow>
             ))}
           </TableHeader>
