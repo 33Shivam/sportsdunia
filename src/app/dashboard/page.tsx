@@ -1,7 +1,6 @@
 "use client";
 import { Input } from "../../components/ui/input";
 
-import { LayoutGrid } from "../../components/ui/layout-grid";
 import { type ChartConfig, ChartContainer } from "@/components/ui/chart";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
@@ -106,33 +105,29 @@ export default function Dashboard() {
   );
 }
 
-export const Logo = () => {
-  return (
-    <Link
-      href="#"
-      className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
+const Logo: () => React.JSX.Element = () => (
+  <Link
+    href="#"
+    className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
+  >
+    <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+    <motion.span
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="font-medium text-black dark:text-white whitespace-pre"
     >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="font-medium text-black dark:text-white whitespace-pre"
-      >
-        Sportsdunia
-      </motion.span>
-    </Link>
-  );
-};
-export const LogoIcon = () => {
-  return (
-    <Link
-      href="#"
-      className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
-    >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
-    </Link>
-  );
-};
+      Sportsdunia
+    </motion.span>
+  </Link>
+);
+const LogoIcon: () => React.JSX.Element = () => (
+  <Link
+    href="#"
+    className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
+  >
+    <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+  </Link>
+);
 
 const DDashboard = () => {
   const [data, setData] = useState<any[]>([]);
