@@ -154,12 +154,15 @@ const DDashboard = () => {
     }),
     []
   );
+
+  const dataDummy = fetch("/reponse.json");
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://newsapi.org/v2/everything?q=india&apiKey=f87b7fe9b478454fb4ce62a5e6071de9"
-        );
+        // const response = await fetch(
+        //   "https://newsapi.org/v2/everything?q=india&apiKey=f87b7fe9b478454fb4ce62a5e6071de9"
+        // );
+        const response = await fetch("/response.json"); // for production
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
