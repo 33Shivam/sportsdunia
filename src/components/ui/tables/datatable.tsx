@@ -57,10 +57,11 @@ export function DataTable<TData, TValue>({
   });
 
   // Export all data to CSV
-  var dataString = JSON.stringify(data);
-  console.log("datastring", dataString);
+
   const handleExportData = () => {
-    const csv = generateCsv(csvConfig)(data); // Generate CSV for all data
+    // @ts-ignore
+    const csv = generateCsv(csvConfig)(data);
+
     download(csvConfig)(csv); // Trigger CSV download
   };
 

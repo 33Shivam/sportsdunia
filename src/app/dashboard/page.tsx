@@ -136,7 +136,10 @@ const DDashboard = () => {
   const [error, setError] = useState<string | null>(null);
 
   const [payoutRate, setPayoutRate] = useState(() => {
-    const savedRate = localStorage.getItem("payoutRate");
+    var savedRate;
+    if (typeof window !== "undefined") {
+      savedRate = localStorage.getItem("payoutRate");
+    }
     return savedRate ? parseFloat(savedRate) : 0.2;
   });
 
